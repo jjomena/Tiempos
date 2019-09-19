@@ -1,0 +1,10 @@
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.exe.config
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.exe
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.pdb
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.Tiempos.resources
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.Properties.Resources.resources
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.exe
+C:\Users\Usuario\source\repos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.pdb
