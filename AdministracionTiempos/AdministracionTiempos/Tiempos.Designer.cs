@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tiempos));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxNum = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -53,6 +54,10 @@
             this.Apuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnImprimir = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTiempos)).BeginInit();
@@ -130,6 +135,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.BtnImprimir);
             this.groupBox2.Controls.Add(this.dateTimePicker2);
             this.groupBox2.Controls.Add(this.comboBoxEstado);
             this.groupBox2.Controls.Add(this.label7);
@@ -224,6 +230,7 @@
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnAct
             // 
@@ -242,10 +249,13 @@
             this.btnAgregar.TabIndex = 17;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // comboBoxApostador
             // 
             this.comboBoxApostador.FormattingEnabled = true;
+            this.comboBoxApostador.Items.AddRange(new object[] {
+            "Cliente General"});
             this.comboBoxApostador.Location = new System.Drawing.Point(132, 347);
             this.comboBoxApostador.Name = "comboBoxApostador";
             this.comboBoxApostador.Size = new System.Drawing.Size(166, 21);
@@ -258,14 +268,14 @@
             this.dataGridTiempos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Número,
             this.Apuesta});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridTiempos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridTiempos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridTiempos.Location = new System.Drawing.Point(51, 122);
             this.dataGridTiempos.Name = "dataGridTiempos";
             this.dataGridTiempos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -299,6 +309,34 @@
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Fecha del Sorteo :";
+            // 
+            // BtnImprimir
+            // 
+            this.BtnImprimir.Location = new System.Drawing.Point(297, 385);
+            this.BtnImprimir.Name = "BtnImprimir";
+            this.BtnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.BtnImprimir.TabIndex = 33;
+            this.BtnImprimir.Text = "Imprimir";
+            this.BtnImprimir.UseVisualStyleBackColor = true;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Tiempos
             // 
@@ -344,6 +382,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Apuesta;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnImprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
 

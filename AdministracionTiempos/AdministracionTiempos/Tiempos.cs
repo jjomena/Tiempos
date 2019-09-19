@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,5 +80,83 @@ namespace AdministracionTiempos
             }
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+      
+
+             printDialog1.Document = printDocument1;
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+                printDocument1.Print();
+            }
+         
+
+
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+
+
+
+            Graphics graphics = e.Graphics;
+            Font font = new Font("Courier New", 9,FontStyle.Bold);
+
+            int startx = 10;
+            int starty = 10;
+            int offset = 140;
+            string namestring = "Cliente: ";
+            string cliente = comboBoxApostador.Text.PadRight(5);
+
+
+
+
+            string fecha = "Sorteo: " + dateTimePicker2.Value.ToString("dd-MM-yyyy");
+            string total = "Total: " + TotalTiempos.Text;
+            int fontheight =Convert.ToInt32(font.GetHeight());
+
+            
+            //Aquí están los títulos de las columnas 
+            string columntitles = "Número".PadRight(10) + "Cantidad";
+
+            graphics.DrawString("Abastecedor Jazmín".PadLeft(12), font, new SolidBrush(Color.Black), startx, starty);
+
+            graphics.DrawString(namestring, font, new SolidBrush(Color.Black), startx, starty + 50);
+            graphics.DrawString(cliente, font, new SolidBrush(Color.Black), startx, starty + 70);
+            graphics.DrawString(fecha, font, new SolidBrush(Color.Black), startx, starty + 30);
+            
+            graphics.DrawString(columntitles, font, new SolidBrush(Color.Black), startx, starty + 120);
+
+  
+            for (int counter = 0; counter < (dataGridTiempos.Rows.Count - 1); counter++)
+            {
+              string Numero = dataGridTiempos.Rows[counter].Cells[0].Value.ToString();
+              string Cantidad = dataGridTiempos.Rows[counter].Cells[1].Value.ToString();
+                string linea = Numero.PadRight(10) + "₡" + Cantidad;
+                graphics.DrawString(linea, font, new SolidBrush(Color.Black), startx, starty + offset);
+                offset = offset + fontheight + 5;
+            }
+
+
+
+          
+
+
+            offset = offset + 2;
+            graphics.DrawString(total, font, new SolidBrush(Color.Black), startx, starty + offset);
+            graphics.DrawString("Gracias por su compra", font, new SolidBrush(Color.Black), startx, starty + offset+20);
+        }
     }
-}
+    }
+
