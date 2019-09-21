@@ -18,3 +18,5 @@ C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.exe.config
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.exe
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.pdb
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\baseTiempos.mdf
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\baseTiempos_log.ldf

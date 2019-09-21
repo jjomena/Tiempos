@@ -47,17 +47,14 @@
             this.TotalTiempos = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnAct = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.comboBoxApostador = new System.Windows.Forms.ComboBox();
             this.dataGridTiempos = new System.Windows.Forms.DataGridView();
             this.Número = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTiempos)).BeginInit();
@@ -135,6 +132,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnLimpiar);
             this.groupBox2.Controls.Add(this.BtnImprimir);
             this.groupBox2.Controls.Add(this.dateTimePicker2);
             this.groupBox2.Controls.Add(this.comboBoxHoraSorteo);
@@ -144,12 +142,9 @@
             this.groupBox2.Controls.Add(this.TotalTiempos);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.btnGuardar);
-            this.groupBox2.Controls.Add(this.btnAct);
-            this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Controls.Add(this.comboBoxApostador);
             this.groupBox2.Controls.Add(this.dataGridTiempos);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(482, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(471, 443);
@@ -159,9 +154,10 @@
             // 
             // BtnImprimir
             // 
-            this.BtnImprimir.Location = new System.Drawing.Point(297, 385);
+            this.BtnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnImprimir.Location = new System.Drawing.Point(6, 384);
             this.BtnImprimir.Name = "BtnImprimir";
-            this.BtnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.BtnImprimir.Size = new System.Drawing.Size(124, 42);
             this.BtnImprimir.TabIndex = 33;
             this.BtnImprimir.Text = "Imprimir";
             this.BtnImprimir.UseVisualStyleBackColor = true;
@@ -169,56 +165,60 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(132, 82);
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(169, 77);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker2.TabIndex = 32;
             // 
             // comboBoxHoraSorteo
             // 
+            this.comboBoxHoraSorteo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxHoraSorteo.FormattingEnabled = true;
             this.comboBoxHoraSorteo.Items.AddRange(new object[] {
             "Tarde",
             "Noche"});
-            this.comboBoxHoraSorteo.Location = new System.Drawing.Point(107, 320);
+            this.comboBoxHoraSorteo.Location = new System.Drawing.Point(132, 317);
             this.comboBoxHoraSorteo.Name = "comboBoxHoraSorteo";
-            this.comboBoxHoraSorteo.Size = new System.Drawing.Size(166, 21);
+            this.comboBoxHoraSorteo.Size = new System.Drawing.Size(166, 28);
             this.comboBoxHoraSorteo.TabIndex = 31;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(40, 320);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(22, 320);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(93, 20);
             this.label7.TabIndex = 30;
             this.label7.Text = "Sorteo de:";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(132, 24);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(169, 37);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 30;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(202, 275);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(165, 294);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 20);
+            this.label8.Size = new System.Drawing.Size(64, 20);
             this.label8.TabIndex = 29;
             this.label8.Text = "Total : ";
             // 
             // TotalTiempos
             // 
             this.TotalTiempos.AutoSize = true;
-            this.TotalTiempos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalTiempos.Location = new System.Drawing.Point(260, 275);
+            this.TotalTiempos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTiempos.Location = new System.Drawing.Point(235, 294);
             this.TotalTiempos.Name = "TotalTiempos";
-            this.TotalTiempos.Size = new System.Drawing.Size(18, 20);
+            this.TotalTiempos.Size = new System.Drawing.Size(19, 20);
             this.TotalTiempos.TabIndex = 28;
             this.TotalTiempos.Text = "0";
             this.TotalTiempos.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -226,51 +226,23 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 24);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 25;
             this.label4.Text = "Fecha Actual : ";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(297, 414);
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(159, 384);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(130, 42);
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnAct
-            // 
-            this.btnAct.Location = new System.Drawing.Point(89, 393);
-            this.btnAct.Name = "btnAct";
-            this.btnAct.Size = new System.Drawing.Size(75, 23);
-            this.btnAct.TabIndex = 18;
-            this.btnAct.Text = "Actualizar";
-            this.btnAct.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(183, 393);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 17;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // comboBoxApostador
-            // 
-            this.comboBoxApostador.FormattingEnabled = true;
-            this.comboBoxApostador.Items.AddRange(new object[] {
-            "Cliente General"});
-            this.comboBoxApostador.Location = new System.Drawing.Point(132, 347);
-            this.comboBoxApostador.Name = "comboBoxApostador";
-            this.comboBoxApostador.Size = new System.Drawing.Size(166, 21);
-            this.comboBoxApostador.TabIndex = 16;
-            this.comboBoxApostador.Text = "Seleccione el Nombre";
             // 
             // dataGridTiempos
             // 
@@ -280,7 +252,7 @@
             this.Apuesta});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -288,6 +260,7 @@
             this.dataGridTiempos.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridTiempos.Location = new System.Drawing.Point(51, 122);
             this.dataGridTiempos.Name = "dataGridTiempos";
+            this.dataGridTiempos.ReadOnly = true;
             this.dataGridTiempos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTiempos.Size = new System.Drawing.Size(257, 150);
             this.dataGridTiempos.TabIndex = 11;
@@ -296,27 +269,21 @@
             // 
             this.Número.HeaderText = "Número";
             this.Número.Name = "Número";
+            this.Número.ReadOnly = true;
             // 
             // Apuesta
             // 
             this.Apuesta.HeaderText = "Apuesta";
             this.Apuesta.Name = "Apuesta";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 348);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Nombre Cliente :";
+            this.Apuesta.ReadOnly = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 82);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Fecha del Sorteo :";
             // 
@@ -337,6 +304,17 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(305, 384);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(114, 42);
+            this.btnLimpiar.TabIndex = 34;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // Tiempos
             // 
@@ -374,18 +352,15 @@
         private System.Windows.Forms.Label TotalTiempos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnAct;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ComboBox comboBoxApostador;
         private System.Windows.Forms.DataGridView dataGridTiempos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Número;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apuesta;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnImprimir;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
 

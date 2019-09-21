@@ -8,3 +8,5 @@ C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.exe
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.pdb
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.csprojAssemblyReference.cache
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Release\baseTiempos.mdf
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Release\baseTiempos_log.ldf

@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Meter medidas de seguridad
+//Que no permita apostar si falta X tiempo para el sorteo
+//hacer que al poner "9" se vuelva "09"
 namespace AdministracionTiempos
 {
     public partial class Tiempos : Form
@@ -24,8 +27,9 @@ namespace AdministracionTiempos
             {
                 String Num = textBoxNum.Text;
                 int pruebaNum = int.Parse(Num);
-                if ((pruebaNum > 0) && (pruebaNum < 99))
+                if ((pruebaNum >= 0) && (pruebaNum < 99))
                 {
+
                     int Apostar = int.Parse(txtApuesta.Text);
                     //dataGridTiempos.Rows.Add(Num, Apostar);
                     AgregarTiempos(Num, Apostar);
@@ -55,6 +59,12 @@ namespace AdministracionTiempos
             string Numero;
             int CantidadApuesta;
             int Control = 0;
+
+            if (Num.Length == 1)
+            {
+                Num = "0" + Num;
+            }
+
             if (dataGridTiempos.Rows.Count > 1)
             {
                 for (int counter = 0; counter < (dataGridTiempos.Rows.Count - 1); counter++)
@@ -92,14 +102,24 @@ namespace AdministracionTiempos
 
         private void BtnImprimir_Click(object sender, EventArgs e)
         {
-      
-
-             printDialog1.Document = printDocument1;
-            if (printDialog1.ShowDialog() == DialogResult.OK)
+            if (comboBoxHoraSorteo.Text == "")
             {
-                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
-                printDocument1.Print();
+                MessageBox.Show("Debe ingresar la hora del sorteo");
+
             }
+
+            if (comboBoxHoraSorteo.Text != "")
+            {
+                printDialog1.Document = printDocument1;
+                if (printDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+                    printDocument1.Print();
+                }
+
+            }
+
+          
          
 
 
@@ -115,9 +135,8 @@ namespace AdministracionTiempos
 
             int startx = 10;
             int starty = 10;
-            int offset = 200;
-            string namestring = "Cliente: ";
-            string cliente = comboBoxApostador.Text.PadRight(5);
+            int offset = 160;
+        
             string paga = "Paga 80 veces";
             string nuevosTiempos = "Sorteo Nuevos Tiempos";
             string horaSorteo = "Sorteo de la " + comboBoxHoraSorteo.Text;
@@ -129,7 +148,7 @@ namespace AdministracionTiempos
             //Cuanto paga el premio(primero paga 80 veces) con el sorteo de Nuevos Tiempos
             //Sorteo de tarde o noche
             //Esas dos debajo de fecha de sorteo
-            string fecha = "Sorteo: " + dateTimePicker2.Value.ToString("dd-MM-yyyy");
+            string fecha = "Sorteo: " + dateTimePicker2.Value.ToString("ddd,dd-MM-yyyy");
             string total = "Total:  ₡"  + TotalTiempos.Text;
             int fontheight =Convert.ToInt32(font.GetHeight());
 
@@ -144,12 +163,11 @@ namespace AdministracionTiempos
             graphics.DrawString(nuevosTiempos, font, new SolidBrush(Color.Black), startx, starty + 70);
             graphics.DrawString(horaSorteo, font, new SolidBrush(Color.Black), startx, starty + 90);
 
-            graphics.DrawString(namestring, font, new SolidBrush(Color.Black), startx, starty + 110);
-            graphics.DrawString(cliente, font, new SolidBrush(Color.Black), startx, starty + 130);
+         
      
 
 
-            graphics.DrawString(columntitles, font, new SolidBrush(Color.Black), startx, starty + 180);
+            graphics.DrawString(columntitles, font, new SolidBrush(Color.Black), startx, starty + 140);
 
   
             for (int counter = 0; counter < (dataGridTiempos.Rows.Count - 1); counter++)
@@ -169,6 +187,18 @@ namespace AdministracionTiempos
             offset = offset + 2;
             graphics.DrawString(total, font, new SolidBrush(Color.Black), startx, starty + offset);
             graphics.DrawString("Gracias por su compra", font, new SolidBrush(Color.Black), startx, starty + offset+20);
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            textBoxNum.Clear();
+            txtApuesta.Clear();
+            comboBoxHoraSorteo.ResetText();
+            dataGridTiempos.Rows.Clear();
+            dateTimePicker2.ResetText();
+            TotalTiempos.Text = "0";
+
+
         }
     }
     }
