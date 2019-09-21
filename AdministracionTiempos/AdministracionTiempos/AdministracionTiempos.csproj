@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>istockphoto-927439892-612x612.ico</ApplicationIcon>
+    <ApplicationIcon>Casino_and_Gambling_Outline-05-512.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -123,6 +123,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>baseTiempos.mdf</DependentUpon>
     </Content>
+    <Content Include="Casino_and_Gambling_Outline-05-512.ico" />
     <Content Include="istockphoto-927439892-612x612.ico" />
     <Content Include="logoTiempos.ico" />
   </ItemGroup>
