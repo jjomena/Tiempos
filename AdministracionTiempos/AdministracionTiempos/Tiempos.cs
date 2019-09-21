@@ -115,28 +115,41 @@ namespace AdministracionTiempos
 
             int startx = 10;
             int starty = 10;
-            int offset = 140;
+            int offset = 200;
             string namestring = "Cliente: ";
             string cliente = comboBoxApostador.Text.PadRight(5);
+            string paga = "Paga 80 veces";
+            string nuevosTiempos = "Sorteo Nuevos Tiempos";
+            string horaSorteo = "Sorteo de la " + comboBoxHoraSorteo.Text;
 
+            //Paga 80 veces
+            //sorteo de Nuevos Tiempos
+            //Sorteo de: Tarde/Noche comboBoxHorasSorteo.Text
 
-
-
+            //Cuanto paga el premio(primero paga 80 veces) con el sorteo de Nuevos Tiempos
+            //Sorteo de tarde o noche
+            //Esas dos debajo de fecha de sorteo
             string fecha = "Sorteo: " + dateTimePicker2.Value.ToString("dd-MM-yyyy");
-            string total = "Total: " + TotalTiempos.Text;
+            string total = "Total:  ₡"  + TotalTiempos.Text;
             int fontheight =Convert.ToInt32(font.GetHeight());
 
             
             //Aquí están los títulos de las columnas 
-            string columntitles = "Número".PadRight(10) + "Cantidad";
+            string columntitles = "Número".PadRight(10) + "Monto";
 
             graphics.DrawString("Abastecedor Jazmín".PadLeft(12), font, new SolidBrush(Color.Black), startx, starty);
 
-            graphics.DrawString(namestring, font, new SolidBrush(Color.Black), startx, starty + 50);
-            graphics.DrawString(cliente, font, new SolidBrush(Color.Black), startx, starty + 70);
             graphics.DrawString(fecha, font, new SolidBrush(Color.Black), startx, starty + 30);
-            
-            graphics.DrawString(columntitles, font, new SolidBrush(Color.Black), startx, starty + 120);
+            graphics.DrawString(paga, font, new SolidBrush(Color.Black), startx, starty + 50);
+            graphics.DrawString(nuevosTiempos, font, new SolidBrush(Color.Black), startx, starty + 70);
+            graphics.DrawString(horaSorteo, font, new SolidBrush(Color.Black), startx, starty + 90);
+
+            graphics.DrawString(namestring, font, new SolidBrush(Color.Black), startx, starty + 110);
+            graphics.DrawString(cliente, font, new SolidBrush(Color.Black), startx, starty + 130);
+     
+
+
+            graphics.DrawString(columntitles, font, new SolidBrush(Color.Black), startx, starty + 180);
 
   
             for (int counter = 0; counter < (dataGridTiempos.Rows.Count - 1); counter++)

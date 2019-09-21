@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tiempos));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxNum = new System.Windows.Forms.TextBox();
@@ -38,8 +38,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnImprimir = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxEstado = new System.Windows.Forms.ComboBox();
+            this.comboBoxHoraSorteo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.Apuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnImprimir = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
@@ -137,7 +137,7 @@
             // 
             this.groupBox2.Controls.Add(this.BtnImprimir);
             this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.comboBoxEstado);
+            this.groupBox2.Controls.Add(this.comboBoxHoraSorteo);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label8);
@@ -157,6 +157,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "INFORMACIÓN GENERAL";
             // 
+            // BtnImprimir
+            // 
+            this.BtnImprimir.Location = new System.Drawing.Point(297, 385);
+            this.BtnImprimir.Name = "BtnImprimir";
+            this.BtnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.BtnImprimir.TabIndex = 33;
+            this.BtnImprimir.Text = "Imprimir";
+            this.BtnImprimir.UseVisualStyleBackColor = true;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(132, 82);
@@ -164,25 +174,25 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 32;
             // 
-            // comboBoxEstado
+            // comboBoxHoraSorteo
             // 
-            this.comboBoxEstado.FormattingEnabled = true;
-            this.comboBoxEstado.Items.AddRange(new object[] {
-            "Cancelado",
-            "Pendiente"});
-            this.comboBoxEstado.Location = new System.Drawing.Point(107, 320);
-            this.comboBoxEstado.Name = "comboBoxEstado";
-            this.comboBoxEstado.Size = new System.Drawing.Size(166, 21);
-            this.comboBoxEstado.TabIndex = 31;
+            this.comboBoxHoraSorteo.FormattingEnabled = true;
+            this.comboBoxHoraSorteo.Items.AddRange(new object[] {
+            "Tarde",
+            "Noche"});
+            this.comboBoxHoraSorteo.Location = new System.Drawing.Point(107, 320);
+            this.comboBoxHoraSorteo.Name = "comboBoxHoraSorteo";
+            this.comboBoxHoraSorteo.Size = new System.Drawing.Size(166, 21);
+            this.comboBoxHoraSorteo.TabIndex = 31;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(40, 320);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 30;
-            this.label7.Text = "Estado :";
+            this.label7.Text = "Sorteo de:";
             // 
             // dateTimePicker1
             // 
@@ -268,14 +278,14 @@
             this.dataGridTiempos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Número,
             this.Apuesta});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridTiempos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridTiempos.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridTiempos.Location = new System.Drawing.Point(51, 122);
             this.dataGridTiempos.Name = "dataGridTiempos";
             this.dataGridTiempos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -309,16 +319,6 @@
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Fecha del Sorteo :";
-            // 
-            // BtnImprimir
-            // 
-            this.BtnImprimir.Location = new System.Drawing.Point(297, 385);
-            this.BtnImprimir.Name = "BtnImprimir";
-            this.BtnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.BtnImprimir.TabIndex = 33;
-            this.BtnImprimir.Text = "Imprimir";
-            this.BtnImprimir.UseVisualStyleBackColor = true;
-            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // printDocument1
             // 
@@ -367,7 +367,7 @@
         private System.Windows.Forms.Label txtNum;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBoxEstado;
+        private System.Windows.Forms.ComboBox comboBoxHoraSorteo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;

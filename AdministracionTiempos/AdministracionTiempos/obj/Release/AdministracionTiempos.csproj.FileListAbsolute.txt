@@ -1,0 +1,10 @@
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Release\AdministracionTiempos.exe.config
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Release\AdministracionTiempos.exe
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Release\AdministracionTiempos.pdb
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.Tiempos.resources
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.Properties.Resources.resources
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.csproj.GenerateResource.cache
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.exe
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.pdb
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Release\AdministracionTiempos.csprojAssemblyReference.cache
