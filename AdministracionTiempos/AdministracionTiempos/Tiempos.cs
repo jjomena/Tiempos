@@ -138,7 +138,7 @@ namespace AdministracionTiempos
             int offset = 160;
         
             string paga = "Paga 80 veces";
-            string nuevosTiempos = "Sorteo Nuevos Tiempos";
+            string nuevosTiempos = "Con los Nuevos Tiempos";
             string horaSorteo = "Sorteo de la " + comboBoxHoraSorteo.Text;
 
             //Paga 80 veces
@@ -160,8 +160,8 @@ namespace AdministracionTiempos
 
             graphics.DrawString(fecha, font, new SolidBrush(Color.Black), startx, starty + 30);
             graphics.DrawString(paga, font, new SolidBrush(Color.Black), startx, starty + 50);
-            graphics.DrawString(nuevosTiempos, font, new SolidBrush(Color.Black), startx, starty + 70);
-            graphics.DrawString(horaSorteo, font, new SolidBrush(Color.Black), startx, starty + 90);
+            graphics.DrawString(nuevosTiempos, font, new SolidBrush(Color.Black), startx, starty + 90);
+            graphics.DrawString(horaSorteo, font, new SolidBrush(Color.Black), startx, starty + 70);
 
          
      
@@ -184,7 +184,7 @@ namespace AdministracionTiempos
           
 
 
-            offset = offset + 2;
+            offset = offset + 30;
             graphics.DrawString(total, font, new SolidBrush(Color.Black), startx, starty + offset);
             graphics.DrawString("Gracias por su compra", font, new SolidBrush(Color.Black), startx, starty + offset+20);
         }
