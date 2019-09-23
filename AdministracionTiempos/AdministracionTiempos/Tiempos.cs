@@ -27,7 +27,7 @@ namespace AdministracionTiempos
             {
                 String Num = textBoxNum.Text;
                 int pruebaNum = int.Parse(Num);
-                if ((pruebaNum >= 0) && (pruebaNum < 99))
+                if ((pruebaNum >= 0) && (pruebaNum <= 99))
                 {
 
                     int Apostar = int.Parse(txtApuesta.Text);
