@@ -1,0 +1,1 @@
+﻿exec agregarTiempos @fchJuego='2011-08-10 08:06:12.000',@fchSorteo='2011-08-10 08:06:12.000',@numero=21,@apuesta=2500,@hora=1,@identificador='21545'

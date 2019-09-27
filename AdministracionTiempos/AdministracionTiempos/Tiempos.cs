@@ -200,6 +200,11 @@ namespace AdministracionTiempos
 
 
         }
+
+        private void PrintPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

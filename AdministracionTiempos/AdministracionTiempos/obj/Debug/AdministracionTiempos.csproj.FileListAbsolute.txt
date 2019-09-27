@@ -32,3 +32,4 @@ C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\o
 C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.exe
 C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.pdb
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.PanelControl.resources
