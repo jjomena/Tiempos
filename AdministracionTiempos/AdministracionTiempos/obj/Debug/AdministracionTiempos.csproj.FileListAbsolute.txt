@@ -20,3 +20,15 @@ C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.pdb
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\baseTiempos.mdf
 C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\baseTiempos_log.ldf
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\baseTiempos.mdf
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\baseTiempos_log.ldf
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.exe.config
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.exe
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\bin\Debug\AdministracionTiempos.pdb
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.Tiempos.resources
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.Properties.Resources.resources
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.exe
+C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.pdb
