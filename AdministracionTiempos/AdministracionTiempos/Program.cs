@@ -16,7 +16,7 @@ namespace AdministracionTiempos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tiempos());
+            Application.Run(new PanelControl());
         }
     }
 }

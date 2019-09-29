@@ -33,3 +33,4 @@ C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\o
 C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.exe
 C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.pdb
 C:\Users\Usuario\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.PanelControl.resources
+C:\Users\USER\Documents\Tiempos\AdministracionTiempos\AdministracionTiempos\obj\Debug\AdministracionTiempos.PanelControl.resources

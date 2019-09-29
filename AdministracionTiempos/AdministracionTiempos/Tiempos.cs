@@ -16,6 +16,11 @@ namespace AdministracionTiempos
 {
     public partial class Tiempos : Form
     {
+        public DateTime horaActual;
+        public DateTime dtTarde;
+        public DateTime dtNoche;
+
+        
         public Tiempos()
         {
             InitializeComponent();
@@ -102,13 +107,49 @@ namespace AdministracionTiempos
 
         private void BtnImprimir_Click(object sender, EventArgs e)
         {
+            dtTarde = Convert.ToDateTime(PanelControl.horaTarde);
+            dtNoche = Convert.ToDateTime(PanelControl.horaNoche);
+
+      
+            
+            Boolean puedeVender=false;
+
+
+            //Poner un if que vuelve puedeVender true si la fecha escogida es la de hoy
+
+            if(dateTimePicker1.Text!= dateTimePicker2.Text)
+            {
+               
+                puedeVender = true;
+            }
+
+            if (comboBoxHoraSorteo.Text== "Tarde" && dateTimePicker1.Text==dateTimePicker2.Text)
+            {
+                if (dtTarde.TimeOfDay > DateTime.Now.TimeOfDay)
+                {
+                    
+                    puedeVender = true;
+                }
+
+             
+            }
+
+            if (comboBoxHoraSorteo.Text == "Noche" && dateTimePicker1.Text == dateTimePicker2.Text)
+            {
+                if (dtNoche.TimeOfDay > DateTime.Now.TimeOfDay)
+                {
+                    puedeVender = true;
+                }
+            }
+
+
             if (comboBoxHoraSorteo.Text == "")
             {
                 MessageBox.Show("Debe ingresar la hora del sorteo");
 
             }
 
-            if (comboBoxHoraSorteo.Text != "")
+            if (comboBoxHoraSorteo.Text != "" && puedeVender==true)
             {
                 printDialog1.Document = printDocument1;
                 if (printDialog1.ShowDialog() == DialogResult.OK)
@@ -119,7 +160,10 @@ namespace AdministracionTiempos
 
             }
 
-          
+            if (puedeVender == false)
+            {
+                MessageBox.Show("La venta para el sorteo de la " + comboBoxHoraSorteo.Text + " ya está cerrada");
+            }
          
 
 
