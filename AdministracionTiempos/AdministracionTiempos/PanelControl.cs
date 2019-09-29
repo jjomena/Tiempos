@@ -19,6 +19,7 @@ namespace AdministracionTiempos
         public DateTime dtTarde;
         public DateTime dtNoche;
         public String vecesPaga="80";
+        public String cantSeleccion;
 
 
         public PanelControl()
@@ -313,6 +314,45 @@ namespace AdministracionTiempos
             offset = offset + 30;
             graphics.DrawString(total, font, new SolidBrush(Color.Black), startx, starty + offset);
             graphics.DrawString("Gracias por su compra", font, new SolidBrush(Color.Black), startx, starty + offset + 20);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            int numTotal = int.Parse(TotalTiempos.Text);
+
+        
+
+            try
+            {
+                int rowindex = dataGridTiempos.CurrentCell.RowIndex;
+                cantSeleccion = dataGridTiempos.Rows[rowindex].Cells[1].Value.ToString();
+                int nuevoValor = numTotal - int.Parse(cantSeleccion);
+
+
+                dataGridTiempos.Rows.RemoveAt(dataGridTiempos.SelectedRows[0].Index);
+
+
+
+                TotalTiempos.Text = nuevoValor.ToString();
+
+            }
+            catch
+            {
+                MessageBox.Show("La lista de números está vacía");
+
+            }
+
+           
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridTiempos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        
         }
     }
 }
